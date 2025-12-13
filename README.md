@@ -34,15 +34,49 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 
 **Procedure**
 
-/* write all the steps invloved */
+1.Type the program in Quartus software. 2.Compile and run the program. 3.Generate the RTL schematic and save the logic diagram. 4.Create nodes for inputs and outputs to generate the timing diagram. 5.For different input combinations generate the timing diagram.
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
+```
+// JK Flip-Flop (with async reset)
+module jk_ff (
+    input  wire clk, rst, J, K,
+    output reg  Q
+);
+    always @(posedge clk or posedge rst) begin
+        if (rst)
+            Q <= 1'b0;        // Reset
+        else begin
+            case ({J,K})
+                2'b00: Q <= Q;        // Hold
+                2'b01: Q <= 1'b0;     // Reset
+                2'b10: Q <= 1'b1;     // Set
+                2'b11: Q <= ~Q;       // Toggle
+            endcase
+        end
+    end
+endmodule
+```
+<img width="535" height="399" alt="image" src="https://github.com/user-attachments/assets/729381e6-a6e8-4248-9549-ace74703b8ea" />
+
+
+Developed by:HARINARAYANAN A
+RegisterNumber:25017317
 */
 
 **RTL LOGIC FOR FLIPFLOPS**
 
+<img width="1280" height="714" alt="image" src="https://github.com/user-attachments/assets/55b118c3-ae73-45ca-b21d-41af1008654f" />
+
+
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
+<img width="1220" height="287" alt="image" src="https://github.com/user-attachments/assets/e4f18da0-5337-40d7-9c96-9aa711a7fe05" />
+
+
 **RESULTS**
+
+Thus the JK flipflop is implemented and verified.
+
