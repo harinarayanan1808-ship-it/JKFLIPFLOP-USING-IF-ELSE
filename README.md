@@ -34,7 +34,11 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 
 **Procedure**
 
-1.Type the program in Quartus software. 2.Compile and run the program. 3.Generate the RTL schematic and save the logic diagram. 4.Create nodes for inputs and outputs to generate the timing diagram. 5.For different input combinations generate the timing diagram.
+1.Type the program in Quartus software.
+2.Compile and run the program.
+3.Generate the RTL schematic and save the logic diagram. 
+4.Create nodes for inputs and outputs to generate the timing diagram.
+5.For different input combinations generate the timing diagram.
 
 **PROGRAM**
 
@@ -73,7 +77,7 @@ RegisterNumber:25017317
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
-<img width="1220" height="287" alt="image" src="https://github.com/user-attachments/assets/e4f18da0-5337-40d7-9c96-9aa711a7fe05" />
+![image](https://github.com/user-attachments/assets/c50cccb4-76ff-44ff-8d28-e798eb142e4c)
 
 
 **RESULTS**
